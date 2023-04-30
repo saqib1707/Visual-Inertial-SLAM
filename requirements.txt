@@ -1,0 +1,7 @@
+numpy
+cv2
+matplotlib
+scipy
+argparse
+matplotlib==3.4.2
+tqdm==4.61.2

@@ -1,28 +1,33 @@
-## Requirements
-- numpy
-- cv2
-- matplotlib
-- scipy
-- argparse
-- matplotlib==3.4.2
-- tqdm==4.61.2
+# About
+This project implemented a Extended Kalman Filter to solve the Simultaneous Localization and Mapping (SLAM) problem on a robot moving in an initially unknown environment. Specifically we implemented a Visual Inertial Extended Kalman Filter that uses a gaussian distribution to estimate the robot pose and landmark positions at any given time. The map consists of the collection of these landmark feature points.
 
 ## Project Structure
-- project2/
-    - code/
-        - main.py
-        - myutils.py
-        - pr3_utils.py
-        - slam_scratch_code.ipynb (irrelevant)
-    - data/
-        - 03.npz
-        - 10.npz
-    - plots/
-        - contains all plots
+Files are structered in the code folder. 
+<pre>
+├── README.md
+├── code
+│   ├── main.py
+│   ├── myutils.py
+│   ├── pr3_utils.py
+│   └── slam_scratch_code.ipynb
+├── data
+│   ├── 03.npz
+│   ├── 03_video_every10frames.avi
+│   ├── 10.npz
+│   └── 10_video_every10frames.avi
+├── plots
+├── problem_statement.pdf
+├── report
+│   └── report.pdf
+└── requirements.txt
+</pre>
 
-## To run the particle filter SLAM code
+## Technical Report
+* [Saqib Azim. "Visual-Inertial SLAM" March 2023](report/Visual_Inertial_SLAM.pdf)
+
+## To run the Visual-Inertial SLAM code
 ```
-cd project3/code/
+cd code/
 ```
 ```
 python3 main.py --ds=3 --mapping --featSkip=6 --initPoseCov=0.01 --initLMCov=1.0 --vcov=10 --wcov=1e-2 --distThresh=200
